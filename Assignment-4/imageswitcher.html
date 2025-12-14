@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Switcher</title>
+</head>
+<body style="text-align:center;">
+
+    <h2>Image Switcher</h2>
+
+    <img id="myImage" 
+         src="https://picsum.photos/id/237/300/200" 
+         width="300" height="200">
+
+    <br><br>
+
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        let images = [
+            "https://picsum.photos/id/237/300/200",
+            "https://picsum.photos/id/238/300/200"
+        ];
+
+        let index = 0;
+
+        function nextImage() {
+            index = (index + 1) % images.length;
+            document.getElementById("myImage").src = images[index];
+        }
+
+        function prevImage() {
+            index = (index - 1 + images.length) % images.length;
+            document.getElementById("myImage").src = images[index];
+        }
+    </script>
+
+</body>
+</html>

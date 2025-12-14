@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+</head>
+<body style="text-align:center; background:white; color:black;" id="body">
+
+    <h2>Theme Switcher</h2>
+    <p>Click the button to change theme</p>
+
+    <button onclick="toggleTheme()">Dark Mode</button>
+
+    <script>
+        let isDark = false;
+
+        function toggleTheme() {
+            let body = document.getElementById("body");
+            let btn = document.querySelector("button");
+
+            if (isDark) {
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                btn.innerText = "Dark Mode";
+            } else {
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                btn.innerText = "Light Mode";
+            }
+
+            isDark = !isDark;
+        }
+    </script>
+
+</body>
+</html>

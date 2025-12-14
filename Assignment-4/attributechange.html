@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Attribute Change</title>
+</head>
+<body style="text-align:center;">
+
+    <h2>Change Image Size</h2>
+
+    <img id="myImg"
+         src="https://picsum.photos/300/200"
+         width="300"
+         height="200">
+
+    <br><br>
+
+    <button onclick="smallImage()">Small</button>
+    <button onclick="largeImage()">Large</button>
+
+    <script>
+        function smallImage() {
+            let img = document.getElementById("myImg");
+            img.setAttribute("width", "150");
+            img.setAttribute("height", "100");
+        }
+
+        function largeImage() {
+            let img = document.getElementById("myImg");
+            img.setAttribute("width", "400");
+            img.setAttribute("height", "300");
+        }
+    </script>
+
+</body>
+</html>

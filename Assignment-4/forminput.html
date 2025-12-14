@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Input Reader</title>
+</head>
+<body style="text-align:center;">
+
+    <h2>Form Input Reader</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <br><br>
+
+    <button onclick="showName()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function showName() {
+            let userName = document.getElementById("name").value;
+            document.getElementById("output").innerText =
+                "Hello, " + userName;
+        }
+    </script>
+
+</body>
+</html>
