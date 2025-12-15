@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Next Page</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="1">Welcome to Registration Page </h1>
+<script>
+    let params=new URLSearchParams(window.location.search);
+    let na=params.get("firstname");
+document.getElementById("1").innerHTML=`Welcome! $(na)`;
+</script>
+
+
+</body>
+</html>
