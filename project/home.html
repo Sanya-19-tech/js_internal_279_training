@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo of Online Project</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #667eea, #fad0c4);
+    color: #333;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin: 20px 0;
+    text-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.nav span {
+    margin: 0 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav span:hover {
+    color: #ffec00;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: #ffec00;
+    margin: 10px auto;
+    width: 90%;
+}
+
+.section {
+    position: absolute;
+    top: 28%;
+    height: 65%;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.left {
+    left: 2%;
+    width: 30%;
+    background: rgba(255,255,255,0.25);
+    color: #333;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.middle {
+    left: 35%;
+    width: 30%;
+    background: rgba(255,255,255,0.3);
+    color: #333;
+}
+
+.right {
+    left: 68%;
+    width: 28%;
+    background: rgba(255,255,255,0.25);
+    padding-top: 10px;
+    color: #333;
+}
+
+.middle h3, .right h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 180px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 15px rgba(102,126,234,0.2);
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea, #667eea);
+    color: #fff;
+}
+
+button[type="reset"] {
+    background: linear-gradient(135deg, #42e695, #3bb2b8);
+    color: #fff;
+    margin-left: 10px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+a {
+    text-decoration: none;
+    color:#667eea;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffe600;
+}
+
+marquee {
+    font-weight: 500;
+    color: #333;
+}
+
+@media(max-width: 1200px){
+    .section { top: 25%; height: 65%; }
+    .left, .middle, .right { width: 30%; }
+}
+
+@media(max-width: 900px){
+    .section { position: static; width: 90%; margin: 20px auto; }
+    .left, .middle, .right { width: 100%; left: 0; margin-bottom: 20px; }
+}
+</style>
+</head>
+<body>
+
+<h1>HCL Project</h1>
+<hr>
+
+<div class="nav">
+  <span>HOME</span>
+  <span>Gallery</span>
+  <span>Contact</span>
+  <span>Helpline</span>
+  <span>Menu5</span>
+  <span>Menu6</span>
+</div>
+
+<hr>
+
+<div class="section left">
+    <center>
+        text1<br>
+        text1<br>
+        text1<br>
+        text1<br>
+        text1<br>
+        text1<br>
+        text1<br>
+        text1<br>
+    </center>
+</div>
+
+<div class="section middle">
+    <h3>Important Notice</h3>
+    <marquee direction="up" onmouseover="stop();" onmouseout="start();">
+        <center>
+            Notice 1 <br>
+            Notice 2 <br>
+            Notice 3 <br>
+            Notice 4 <br>
+            Notice 5 <br>
+            Notice 6 <br>
+            Notice 7 <br>
+            Notice 8 <br>
+        </center>
+    </marquee>
+</div>
+
+<div class="section right">
+    <h3>Login</h3>
+    <form id="loginForm" method="get">
+        <table>
+            <tr>
+                <td>User Name</td>
+                <td>
+                    <input id="username" name="user" type="text" placeholder="Enter any text">
+                    <span id="userError" style="color:red; font-size:12px; display:none;">Username is required</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input id="password" name="pass" type="password" placeholder="Enter any text">
+                    <span id="passError" style="color:red; font-size:12px; display:none;">Password is required</span>
+                </td>
+            </tr>
+        </table>
+        <center>
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+        </center>
+    </form>
+    <br>
+    <center><a href="reg.html">New User or Signup</a></center>
+</div>
+
+<script>
+(function(){
+  const form = document.getElementById('loginForm');
+  const userInput = document.getElementById('username');
+  const passInput = document.getElementById('password');
+  const userError = document.getElementById('userError');
+  const passError = document.getElementById('passError');
+
+  function show(el){ el.style.display = 'inline'; }
+  function hide(el){ el.style.display = 'none'; }
+
+  form.addEventListener('submit', function(e){
+    let ok = true;
+    const user = userInput.value.trim();
+    const pass = passInput.value.trim();
+
+    if(!user){ show(userError); ok = false; } else { hide(userError); }
+    if(!pass){ show(passError); ok = false; } else { hide(passError); }
+
+    if(!ok){
+      e.preventDefault();
+      return;
+    }
+
+    e.preventDefault();
+    const params = new URLSearchParams({ user, pass });
+    window.location.href = 'reg.html?' + params.toString();
+  });
+
+  userInput.addEventListener('input', () => hide(userError));
+  passInput.addEventListener('input', () => hide(passError));
+})();
+</script>
+
+</body>
+</html>

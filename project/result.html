@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Result</title>
+
+<style>
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px 28px;
+  width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success {
+  color: #2e7d32;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+span {
+  font-weight: 600;
+  color: #555;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2 class="success">Registration Successful!</h2>
+
+  <p><b>Name:</b> <span id="name"></span></p>
+  <p><b>Email:</b> <span id="email"></span></p>
+  <p><b>Gender:</b> <span id="gender"></span></p>
+  <p><b>Course:</b> <span id="course"></span></p>
+
+  <button onclick="goBack()">Go Back</button>
+</div>
+
+<script>
+  document.getElementById("name").textContent = localStorage.getItem("name");
+  document.getElementById("email").textContent = localStorage.getItem("email");
+  document.getElementById("gender").textContent = localStorage.getItem("gender");
+  document.getElementById("course").textContent = localStorage.getItem("course");
+
+  function goBack() {
+    window.location.href = "reg.html";
+  }
+</script>
+
+</body>
+</html>
